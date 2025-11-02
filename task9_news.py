@@ -29,9 +29,8 @@ def get_time_periods(months=1):
         start = (end_date - timedelta(days=30*(i+1))).strftime("%Y-%m-%d")
         end = (end_date - timedelta(days=30*i)).strftime("%Y-%m-%d")
         periods.append((start, end))
-    return periods[::-1]  # earliest to latest
+    return periods[::-1] 
 
-# ------------------- Fetch News -------------------
 def fetch_news(keywords, from_to_period):
     """Fetch news for given keywords and period. Returns DataFrame."""
     all_articles = []
