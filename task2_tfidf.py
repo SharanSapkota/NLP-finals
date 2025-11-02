@@ -57,9 +57,7 @@ def compute_tfidf_similarity(wiki_data):
     df = pd.DataFrame(cos_sim, index=wiki_data.keys(), columns=wiki_data.keys())
     return df
 
-# ---------------------------
-# Test run (if executed directly)
-# ---------------------------
+# Run on the file here 
 if __name__ == "__main__":
     import task1_wiki as t1
     from IPython.display import display
@@ -72,3 +70,7 @@ if __name__ == "__main__":
     
     print("TF-IDF Cosine Similarity (Full Text):")
     display(tfidf_sim_full)
+
+
+# comment on this
+#  The TF-IDF cosine similarity matrix indicates that documents X and Y share the highest similarity, suggesting overlapping topics or vocabulary, whereas A and B are the least similar, indicating distinct subject areas
